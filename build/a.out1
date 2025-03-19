@@ -1,14 +1,8 @@
-**** module/scope: mux_C
+**** module/scope: constant_unit
      Flip-Flops   : 0
-     Logic Gates  : 0
-     LPM[5]: 2 unaccounted
-     LPM[40]: 1 unaccounted
-     LOG[13]: 2 unaccounted
-     LOG[14]: 1 unaccounted
+     Logic Gates  : 64
+     MUX[2]: 32 slices
 **** TOTALS
      Flip-Flops   : 0
-     Logic Gates  : 0
-     LPM[5]: 2 unaccounted
-     LPM[40]: 1 unaccounted
-     LOG[13]: 2 unaccounted
-     LOG[14]: 1 unaccounted
+     Logic Gates  : 64
+     MUX[2]: 32 slices

@@ -1,0 +1,42 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000027c73aa2ce0 .scope module, "constant_unit" "constant_unit" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "CS";
+    .port_info 1 /INPUT 15 "IM";
+    .port_info 2 /OUTPUT 32 "IM_extended";
+o0000027c73ad6f78 .functor BUFZ 1, C4<z>; HiZ drive
+v0000027c73aa3360_0 .net "CS", 0 0, o0000027c73ad6f78;  0 drivers
+o0000027c73ad6fa8 .functor BUFZ 15, C4<zzzzzzzzzzzzzzz>; HiZ drive
+v0000027c73aa36f0_0 .net "IM", 14 0, o0000027c73ad6fa8;  0 drivers
+v0000027c73aa2e70_0 .net "IM_extended", 31 0, L_0000027c73bbeee0;  1 drivers
+v0000027c73aa2f10_0 .net *"_ivl_1", 0 0, L_0000027c73bbec60;  1 drivers
+v0000027c73aa2fb0_0 .net *"_ivl_2", 16 0, L_0000027c73bbed00;  1 drivers
+v0000027c73aa3050_0 .net *"_ivl_4", 31 0, L_0000027c73ad3090;  1 drivers
+L_0000027c73b17fe8 .functor BUFT 1, C4<00000000000000000>, C4<0>, C4<0>, C4<0>;
+v0000027c73aa30f0_0 .net/2u *"_ivl_6", 16 0, L_0000027c73b17fe8;  1 drivers
+v0000027c73bbebc0_0 .net *"_ivl_8", 31 0, L_0000027c73bbee40;  1 drivers
+L_0000027c73bbec60 .part o0000027c73ad6fa8, 14, 1;
+LS_0000027c73bbed00_0_0 .concat [ 1 1 1 1], L_0000027c73bbec60, L_0000027c73bbec60, L_0000027c73bbec60, L_0000027c73bbec60;
+LS_0000027c73bbed00_0_4 .concat [ 1 1 1 1], L_0000027c73bbec60, L_0000027c73bbec60, L_0000027c73bbec60, L_0000027c73bbec60;
+LS_0000027c73bbed00_0_8 .concat [ 1 1 1 1], L_0000027c73bbec60, L_0000027c73bbec60, L_0000027c73bbec60, L_0000027c73bbec60;
+LS_0000027c73bbed00_0_12 .concat [ 1 1 1 1], L_0000027c73bbec60, L_0000027c73bbec60, L_0000027c73bbec60, L_0000027c73bbec60;
+LS_0000027c73bbed00_0_16 .concat [ 1 0 0 0], L_0000027c73bbec60;
+LS_0000027c73bbed00_1_0 .concat [ 4 4 4 4], LS_0000027c73bbed00_0_0, LS_0000027c73bbed00_0_4, LS_0000027c73bbed00_0_8, LS_0000027c73bbed00_0_12;
+LS_0000027c73bbed00_1_4 .concat [ 1 0 0 0], LS_0000027c73bbed00_0_16;
+L_0000027c73bbed00 .concat [ 16 1 0 0], LS_0000027c73bbed00_1_0, LS_0000027c73bbed00_1_4;
+L_0000027c73ad3090 .concat [ 15 17 0 0], o0000027c73ad6fa8, L_0000027c73bbed00;
+L_0000027c73bbee40 .concat [ 15 17 0 0], o0000027c73ad6fa8, L_0000027c73b17fe8;
+L_0000027c73bbeee0 .functor MUXZ 32, L_0000027c73bbee40, L_0000027c73ad3090, o0000027c73ad6f78, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "constant_unit.v";

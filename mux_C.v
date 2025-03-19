@@ -8,7 +8,7 @@ module mux_C (
             2'b00: PC = PC_1;
             2'bx1: PC = BrA;
             2'b10: PC = RAA;
-            default: PC_OUT <= 32'bx;
+            default: PC <= 32'bx;
         endcase
     end
 endmodule

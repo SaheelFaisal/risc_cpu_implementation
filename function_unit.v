@@ -10,7 +10,7 @@ module function_unit (
 
     always @(*) begin
         case (FS)
-            5'b00000: {C, F} = A;
+            5'b00000: {C, F} = A; 
             5'b00001: {C, F} = A + 1;
             5'b00010: {C, F} = A + B;
             5'b00011: {C, F} = A + B + 1;

@@ -9,7 +9,8 @@ module instruction_decoder (
     assign AA = IR[19:15];
     assign BA = IR[14:10];
 
-    wire opcode = IR[31:25];
+    wire [6:0] opcode;
+    assign opcode = IR[31:25];
     reg [14:0] control_word;
 
     assign RW  = control_word[14];

@@ -19,12 +19,11 @@ module function_unit (
             5'b00110: {C, F} = A - 1;
             5'b00111: {C, F} = A;
             5'b01000: {C, F} = A & B;
-            5'b01001: {C, F} = A | B;
-            5'b01010: {C, F} = A ^ B;
-            5'b01011: {C, F} = ~A;
-            5'b11100: {C, F} = B;
-            5'b11101: {C, F} = A << SH;
-            5'b11110: {C, F} = A >> SH;
+            5'b01010: {C, F} = A | B;
+            5'b01100: {C, F} = A ^ B;
+            5'b01110: {C, F} = ~A;
+            5'b10000: {C, F} = A << SH;
+            5'b10001: {C, F} = A >> SH;
             default: {C, F} = 0;
         endcase
 

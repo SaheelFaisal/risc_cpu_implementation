@@ -14,6 +14,74 @@ module risc_cpu (
 
     // Variables and module instantiations for each stage
 
+    // Registers
+    wire [31:0] R0;
+    wire [31:0] R1;
+    wire [31:0] R2;
+    wire [31:0] R3;
+    wire [31:0] R4;
+    wire [31:0] R5;
+    wire [31:0] R6;
+    wire [31:0] R7;
+    wire [31:0] R8;
+    wire [31:0] R9;
+    wire [31:0] R10;
+    wire [31:0] R11;
+    wire [31:0] R12;
+    wire [31:0] R13;
+    wire [31:0] R14;
+    wire [31:0] R15;
+    wire [31:0] R16;
+    wire [31:0] R17;
+    wire [31:0] R18;
+    wire [31:0] R19;
+    wire [31:0] R20;
+    wire [31:0] R21;
+    wire [31:0] R22;
+    wire [31:0] R23;
+    wire [31:0] R24;
+    wire [31:0] R25;
+    wire [31:0] R26;
+    wire [31:0] R27;
+    wire [31:0] R28;
+    wire [31:0] R29;
+    wire [31:0] R30;
+    wire [31:0] R31;
+
+    assign R0 = registers.data[0];
+    assign R1 = registers.data[1];
+    assign R2 = registers.data[2];
+    assign R3 = registers.data[3];
+    assign R4 = registers.data[4];
+    assign R5 = registers.data[5];
+    assign R6 = registers.data[6];
+    assign R7 = registers.data[7];
+    assign R8 = registers.data[8];
+    assign R9 = registers.data[9];
+    assign R10 = registers.data[10];
+    assign R11 = registers.data[11];
+    assign R12 = registers.data[12];
+    assign R13 = registers.data[13];
+    assign R14 = registers.data[14];
+    assign R15 = registers.data[15];
+    assign R16 = registers.data[16];
+    assign R17 = registers.data[17];
+    assign R18 = registers.data[18];
+    assign R19 = registers.data[19];
+    assign R20 = registers.data[20];
+    assign R21 = registers.data[21];
+    assign R22 = registers.data[22];
+    assign R23 = registers.data[23];
+    assign R24 = registers.data[24];
+    assign R25 = registers.data[25];
+    assign R26 = registers.data[26];
+    assign R27 = registers.data[27];
+    assign R28 = registers.data[28];
+    assign R29 = registers.data[29];
+    assign R30 = registers.data[30];
+    assign R31 = registers.data[31];
+
+
     // IF
     reg [31:0] PC, PC_1, IR;
     wire [31:0] instruction, PC_incremented;
@@ -101,7 +169,7 @@ module risc_cpu (
     always @(posedge clk) begin
         if (reset) begin
             {PC, PC_1, IR, PC_2, RW_DOF, DA_DOF, MD_DOF, BS, PS, MW,
-            FS, SH, bus_A, bus_B, RW, DA, MD, V_xor_N, F, data_out} = 0;
+            FS, SH, bus_A, bus_B, RW, DA, MD, V_xor_N, F, data_out} <= 0;
         end
 
         else begin

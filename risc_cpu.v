@@ -142,6 +142,7 @@ module risc_cpu (
 
     assign BrA = PC_2 + bus_B;
     assign mux_C_sel_wire = {BS[1], ( ((PS^Z) | BS[1]) & BS[0])};
+    assign V_xor_N_wire = V^N;
 
     function_unit func_unit(
         .A(bus_A), .B(bus_B), .FS(FS), .SH(SH),
@@ -194,6 +195,7 @@ module risc_cpu (
             RW <= RW_DOF;
             DA <= DA_DOF;
             MD <= MD_DOF;
+            PC <= PC_wire;
             
             V_xor_N <= V_xor_N_wire;
             F <= F_wire;

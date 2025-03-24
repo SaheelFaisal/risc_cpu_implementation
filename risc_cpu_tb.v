@@ -54,19 +54,21 @@ module risc_cpu_tb;
     endtask   
 
     initial begin
+        $dumpfile("risc_cpu_tb.vcd");
+        $dumpvars(0, risc_cpu_tb);
+
         clk = 0;
         reset = 1;
-
         #20
         print_memory();
+
+        reset = 0;
 
         for (i = 0; i < 2; i = i + 1) begin
             #200
             print_memory();
         end
-
-        reset = 1;
-        #40
+        #400
         print_memory();
         $finish;
     end

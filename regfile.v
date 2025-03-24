@@ -11,15 +11,18 @@ module regfile(
     );
 
 reg [31:0] data [31:0];
+reg [31:0] R5;
 
 assign A_data = data [AA];
 assign B_data = data [BA];
 
 integer counter;
 		
-initial
+initial begin
 	for(counter = 0; counter < 32; counter = counter + 1)
 		data [counter] = counter;									// for easier initial debugging
+	R5 = data[0];
+end
 
 always @(posedge clk)
 	begin

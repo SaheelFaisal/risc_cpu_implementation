@@ -6,9 +6,10 @@ module mux_C (
     always @(*) begin
         case (sel)
             2'b00: PC = PC_1;
-            2'bx1: PC = BrA;
+            2'b01: PC = BrA;
             2'b10: PC = RAA;
-            default: PC <= 32'bx;
+            2'b11: PC = BrA;
+            default: PC <= PC_1;
         endcase
     end
 endmodule

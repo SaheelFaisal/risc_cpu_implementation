@@ -8,10 +8,14 @@ module data_memory(
 
     reg [31:0] memword [16383:0];   // 16K words (64 KB total)
     integer i;
+    wire [31:0] mem_5, mem_6, mem_10;    // To view in the simulation
+    assign mem_5 = memword[5];
+    assign mem_6 = memword[6];
+    assign mem_10 = memword[10];
 
     initial begin
-        for(i=0; i<256; i=i+1)
-            memword[i] <= i;					// for easier debugging
+        for(i=0; i<16384; i=i+1)
+            memword[i] <= 0;					// for easier debugging
     end
 
     always @ (posedge clk) begin

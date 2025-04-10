@@ -41,7 +41,7 @@ module instruction_decoder (
             7'b0101010: control_word = 15'b1_00_00_0_0_01010_1_0_0; // ORI
             7'b0101100: control_word = 15'b1_00_00_0_0_01100_1_0_0; // XRI
             7'b1100010: control_word = 15'b1_00_00_0_0_00010_1_0_0; // AIU
-            7'b1100101: control_word = 15'b1_00_00_0_0_00101_1_0_0; // SIU
+            7'b1000101: control_word = 15'b1_00_00_0_0_00101_1_0_0; // SIU
             7'b1000000: control_word = 15'b1_00_00_0_0_00000_0_0_0; // MOV
             7'b0110000: control_word = 15'b1_00_00_0_0_10000_0_0_0; // LSL
             7'b0110001: control_word = 15'b1_00_00_0_0_10001_0_0_0; // LSR
@@ -50,7 +50,7 @@ module instruction_decoder (
             7'b1100000: control_word = 15'b0_00_01_1_0_00000_1_0_1; // BNZ
             7'b1000100: control_word = 15'b0_00_11_0_0_00000_1_0_1; // JMP
             7'b0000111: control_word = 15'b1_00_11_0_0_00111_1_1_1; // JML
-            default: control_word = 15'bx;
+            default: control_word = 15'hxxxx;
         endcase
     end
 endmodule

@@ -14,7 +14,8 @@ module data_memory(
     assign mem_10 = memword[10];
 
     initial begin
-        for(i=0; i<16384; i=i+1)
+        memword[0] = 32'h7FFFFFFF;
+        for(i=1; i<16384; i=i+1)
             memword[i] <= 0;					// for easier debugging
     end
 

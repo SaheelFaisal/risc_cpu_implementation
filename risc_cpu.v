@@ -12,9 +12,7 @@ module risc_cpu (
     input clk, reset
 );
 
-    // Variables and module instantiations for each stage
-
-    // Registers
+    // Registers to view in the simulation.
     wire [31:0] R0;
     wire [31:0] R1;
     wire [31:0] R2;
@@ -81,6 +79,7 @@ module risc_cpu (
     assign R30 = registers.data[30];
     assign R31 = registers.data[31];
 
+    // Variables and module instantiations for each stage
 
     // IF
     reg [31:0] PC, PC_1, IR;
